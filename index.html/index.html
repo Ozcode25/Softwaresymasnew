@@ -80,6 +80,22 @@
   </a>
       </div>
       <p class="mt-6">También puedes enviarnos un mensaje directo desde aquí:</p>
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          var name = document.getElementById('name').value;
+          var email = document.getElementById('email').value;
+          var message = document.getElementById('message').value;
+
+          var mailtoLink = 'mailto:softwaresymas507@gmail.com' +
+               '?subject=' + encodeURIComponent('Nuevo mensaje de ' + name) +
+               '&body=' + encodeURIComponent('Nombre: ' + name + '\nCorreo Electrónico: ' + email + '\n\nMensaje:\n' + message);
+
+          window.location.href = mailtoLink;
+          document.getElementById('confirmation').classList.remove('hidden');
+          this.reset();
+        });
+      </script>
       <form id="contact-form" class="mt-8 max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
         <h3 class="text-xl font-semibold mb-4">Formulario de Contacto</h3>
         <div class="mb-4">
