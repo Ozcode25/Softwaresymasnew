@@ -12,13 +12,28 @@
     
     <!-- Navbar -->
     <nav class="bg-blue-900 bg-opacity-75 text-white p-4 flex justify-between items-center fixed w-full top-0 z-50">
-      <ul class="hidden md:flex space-x-6">
-        <li><a href="#servicios" class="hover:text-gray-300">Servicios</a></li>
-        <li><a href="#nosotros" class="hover:text-gray-300">Sobre Nosotros</a></li>
-        <li><a href="#contacto" class="hover:text-gray-300">Contacto</a></li>
+      <div class="flex items-center space-x-4">
+      <img src="Softwaresymas2025logo.png" alt="Logo de Softwares y Más" class="h-10">
+      <span class="text-xl font-semibold">Softwares y Más</span>
+      </div>
+      <button class="md:hidden text-white focus:outline-none" id="menu-button">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+      </button>
+      <ul class="hidden md:flex space-x-6" id="menu">
+      <li><a href="#servicios" class="hover:text-gray-300">Servicios</a></li>
+      <li><a href="#nosotros" class="hover:text-gray-300">Sobre Nosotros</a></li>
+      <li><a href="#contacto" class="hover:text-gray-300">Contacto</a></li>
       </ul>
     </nav>
-    
+    <script>
+      document.getElementById('menu-button').addEventListener('click', function() {
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+      });
+    </script>
+  
     <!-- Hero Section -->
     <header class="text-center py-16 bg-blue-600 text-white">
         <img src="Softwaresymas2025logo.png" alt="Logo de Softwares y Más" class="h-24 mx-auto">
@@ -60,9 +75,8 @@
       <div class="flex justify-center mt-4 space-x-6">
         <a href="https://api.whatsapp.com/send/?phone=50760690148&text&type=phone_number&app_absent=0" target="_blank">
           <img src="whatsapp-icon.png" alt="WhatsApp" class="h-10">
-  <a href="https://www.instagram.com/softwaresymas/" target="_blank">
+  <a href="https://www.instagram.com/softwaresymas/?igsh=MTQ1Z2tsN2JxYWd2Ng%3D%3D" target="_blank">
     <img src="instagram-icon.png" alt="Instagram" class="h-10">
-  </a>
   </a>
       </div>
       <p class="mt-6">También puedes enviarnos un mensaje directo desde aquí:</p>
